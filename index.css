@@ -12,6 +12,9 @@ body {
 
 input {
     height: 85px;
+    min-width: 50px;
+    max-width: 300px;
+    width: 50%;
     background-color: transparent;
     border: #B295FF 2px solid;
     border-radius: 5px;
