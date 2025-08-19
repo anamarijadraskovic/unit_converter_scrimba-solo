@@ -2,20 +2,75 @@ body {
     margin: 0;
     text-align: center;
     font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+*  {
+    box-sizing:border-box
+}
+
+input {
+    height: 85px;
+    background-color: transparent;
+    border: #B295FF 2px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 58px;
+    font-weight: bold;
+    color: white;
+}
+
+input::placeholder {
+    color: white
+}
+
+button {
+    padding: 10px 28px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: #3D3D3D;
+    font-size: 20px;
 }
 
 .hero {
     background: #6943fe;
     color: white;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    height: 300px;
 }
 
 .main {
     background: #f4f4f4;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 36px;
+    height: calc(100vh - 300px)
 }
 
 .section {
     background: white;
     padding: 5px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+
+    > h3 {
+        color: #5A537B;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    > p {
+        color: #353535;
+    }
 }
