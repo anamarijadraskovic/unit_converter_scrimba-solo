@@ -5,7 +5,7 @@
 */
 
 let convertBtn = document.getElementById("convert-btn")
-let inputEl = document.getElementById("input")
+let inputEl = document.getElementById("input-el")
 let lengthEl = document.getElementById("length-el")
 
 const meterToFeet =  3.281
@@ -14,7 +14,7 @@ const kiloToPound =  2.204
 
 convertBtn.addEventListener("click", function() {
     let baseValue = inputEl.value
-    
-    lengthEl.textContent = `${baseValue} meter = ${baseValue * meterToFeet} feet` 
-    console.log(baseValue)
+    let meterToFeetText = `${baseValue} meter = ${Number(baseValue) * meterToFeet} feet`
+    let feetToMeter = `${baseValue} feet = ${Number(baseValue) / meterToFeet} meter`
+    lengthEl.textContent = `${meterToFeetText} | ${feetToMeter}` 
 })
