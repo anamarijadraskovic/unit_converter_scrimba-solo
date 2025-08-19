@@ -9,18 +9,34 @@ const meterToFeet =  3.281
 const literToGallon =  0.264
 const kiloToPound =  2.204
 
-convertBtn.addEventListener("click", function() {
-    let baseValue = inputEl.value ?? "0"
+const conversions = [
+    {
+        factor: meterToFeet,
+        unitA: "meter",
+        unitB: "feet",
+        outputEl: lengthEl
+    },
+    {
+        factor: literToGallon,
+        unitA: "liter",
+        unitB: "gallon",
+        outputEl: volumeEl
+    },
+    {
+        factor: kiloToPound,
+        unitA: "kilo",
+        unitB: "pound",
+        outputEl: massEl
+    },
+]
 
-    let meterToFeetText = `${baseValue} meter = ${Number(baseValue) * meterToFeet} feet`
-    let feetToMeter = `${baseValue} feet = ${Number(baseValue) / meterToFeet} meter`
-    lengthEl.textContent = `${meterToFeetText} | ${feetToMeter}`
+function renderConversion (value, { factor, unitA, unitB, outputEl}) {
+    const aToB = `${value} ${unitA}${value !== 1 ? "s" : ""} = ${(value * factor).toFixed(3)} ${unitB}${value != 1 ? "s" : ""}`;
+    const bToA = `${value} ${unitB}${value !==1 ? "s" : ""} = ${(value / factor).toFixed(3)} ${unitA}${value != 1 ? "s" : ""}`;
+    outputEl.textContent = `${aToB} | ${bToA}`;
+}
 
-    let literToGallonText = `${baseValue} liters = ${Number(baseValue) * literToGallon} gallons`
-    let gallonToliter = `${baseValue} gallons = ${Number(baseValue) / literToGallon} liters`
-    volumeEl.textContent = `${literToGallonText} | ${gallonToliter}`
-
-    let kilosToPounds = `${baseValue} kilos = ${Number(baseValue) * kiloToPound} pounds`
-    let poundsToKilos = `${baseValue} pounds = ${Number(baseValue) / kiloToPound} kilos`
-    massEl.textContent = `${kilosToPounds} | ${poundsToKilos}`
-})
+convertBtn.addEventListener("click", () => {
+  const baseValue = Number(inputEl.value) || 0;
+  conversions.forEach(conv => renderConversion(baseValue, conv));
+});
