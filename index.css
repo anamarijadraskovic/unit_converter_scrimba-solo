@@ -1,5 +1,23 @@
+:root {
+  --color-bg: #f4f4f4;
+  --color-bg-card: #ffffff;
+  --color-text: #3D3D3D;
+  --color-card-heading: #5A537B;
+  --color-hero-bg: #6943fe;
+}
+
+[data-theme="dark"] {
+  --color-bg: #273549;
+  --color-bg-card: #1F2937;
+  --color-text: #e0e0e0;
+  --color-card-heading: #CCC1FF;
+}
+
+
 body {
     margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
     text-align: center;
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -8,6 +26,10 @@ body {
 
 *  {
     box-sizing:border-box
+}
+
+h1 {
+    color: white;
 }
 
 input {
@@ -38,8 +60,12 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+  opacity: .8;
+}
+
 .hero {
-    background: #6943fe;
+    background: var(--color-hero-bg);
     color: white;
     padding: 30px;
     display: flex;
@@ -51,7 +77,6 @@ button {
 }
 
 .main {
-    background: #f4f4f4;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -62,19 +87,22 @@ button {
 }
 
 .section {
-    background: white;
+    background: var(--color-bg-card);
     padding: 5px;
     width: 100%;
     max-width: 500px;
     border-radius: 5px;
 
     > h3 {
-        color: #5A537B;
+        color: var(--color-card-heading);
         font-size: 20px;
         font-weight: 600;
     }
+}
 
-    > p {
-        color: #353535;
-    }
+body, .section, .hero, input, button {
+  transition: 
+    background 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
 }

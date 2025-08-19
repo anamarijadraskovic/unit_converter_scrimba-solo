@@ -40,3 +40,21 @@ convertBtn.addEventListener("click", () => {
   const baseValue = Number(inputEl.value) || 0;
   conversions.forEach(conv => renderConversion(baseValue, conv));
 });
+
+// THEME SWITCHING
+const toggleBtn = document.getElementById("theme-toggle");
+const root = document.documentElement;
+
+toggleBtn.addEventListener("click", () => {
+  if (root.getAttribute("data-theme") === "dark") {
+    root.removeAttribute("data-theme");  // back to light
+    localStorage.setItem("theme", "light");
+  } else {
+    root.setAttribute("data-theme", "dark");
+    localStorage.setItem("theme", "dark");
+  }
+});
+
+if (localStorage.getItem("theme") === "dark") {
+  root.setAttribute("data-theme", "dark");
+}
