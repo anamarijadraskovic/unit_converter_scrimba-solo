@@ -37,6 +37,13 @@ body, .section, .hero, input, button, main {
 
 h1 {
     color: white;
+    font-size: 1.8rem;
+}
+
+h2 {
+    color: var(--color-card-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 input {
@@ -49,11 +56,10 @@ input {
     text-align: center;
     font-size: 3.5rem;
     font-weight: bold;
-    color: white;
 }
 
 input:hover {
-    outline: #f4f4f4 2px solid;
+    outline: #273549 2px solid;
 }
 
 input::placeholder {
@@ -82,27 +88,27 @@ button {
 
 button:hover {
     filter: brightness(1.2);
-    border: 1px solid #3D3D3D;
+    border: 1px solid #273549;
 }
 
 .hero {
-    background: var(--color-hero-bg);
-    color: white;
-    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 27px;
+    background: var(--color-hero-bg);
+    padding: 4rem 1rem 2rem 1rem;
+    color: white;
+    gap: 1rem;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 1.5rem;
     background-color: var(--color-bg);
-    padding: 3rem;
+    padding: 1.5rem 1rem;
 }
 
 .converter-form {
@@ -117,16 +123,10 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     width: 100%;
     max-width: 32rem;
     border-radius: var(--border-radius);
-}
-
-h2 {
-    color: var(--color-card-heading);
-    font-size: 1.2rem;
-    font-weight: 600;
 }
 
 .sr-only {
@@ -140,7 +140,7 @@ h2 {
     border: 0;
 }
 
-#toggle-theme-btn{
+#toggle-theme-btn {
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -148,6 +148,5 @@ h2 {
 
 #convert-btn {
     padding: .9rem 2rem;
-    font-size: 1.3rem
-    ;
+    font-size: 1.2rem;
 }
