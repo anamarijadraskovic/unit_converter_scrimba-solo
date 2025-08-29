@@ -22,4 +22,11 @@ A simple **Metric ↔ Imperial unit converter** built as a solo project while co
 - CSS (with CSS variables for themes)
 - JavaScript (ES6+)
 
-<img src="./Screenshot 2025-08-19 at 16.02.38.png">
+---
+
+## 📸 Screenshot
+
+<div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+  <img src="./images/app_dark.png" alt="Dark Theme Screenshot" style="width: 45%; max-width: 300px;">
+  <img src="./images/app_light.png" alt="Light Theme Screenshot" style="width: 45%; max-width: 300px;">
+</div>
