@@ -59,7 +59,12 @@ input {
 }
 
 input:hover {
-    outline: #273549 2px solid;
+    outline: #CCC1FF 2px solid;
+}
+
+input:focus {
+    background-color: var(--color-hero-bg);
+    color: white;
 }
 
 input::placeholder {
@@ -70,6 +75,11 @@ input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-hero-bg) inset !important;
+    -webkit-text-fill-color: white !important;
 }
 
 input[type=number] {
