@@ -42,10 +42,10 @@ convertBtn.addEventListener("click", () => {
 });
 
 // THEME SWITCHING
-const toggleBtn = document.getElementById("theme-toggle");
+const toggleThemeBtn = document.getElementById("toggle-theme-btn");
 const root = document.documentElement;
 
-toggleBtn.addEventListener("click", () => {
+toggleThemeBtn.addEventListener("click", () => {
   if (root.getAttribute("data-theme") === "dark") {
     root.removeAttribute("data-theme");  // back to light
     localStorage.setItem("theme", "light");
